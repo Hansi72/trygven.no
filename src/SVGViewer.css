@@ -1,0 +1,18 @@
+.svgContainer {
+  grid-column-start: 1;
+  grid-column-end: end;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.svgView {
+
+
+  background-color: Green;
+}
+
+.controls {
+
+
+  background-color: yellow;
+}

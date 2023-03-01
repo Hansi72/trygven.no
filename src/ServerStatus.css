@@ -1,0 +1,27 @@
+.serverContainer {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-template-columns: 10vw 10vw 10vw;
+
+    background-color: orange;
+}
+
+.server {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.serverStatus {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.circle {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    width: 1vw;
+    height: 1vw;
+    background-color: red;
+    border-radius: 50%;
+}
