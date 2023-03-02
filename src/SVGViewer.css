@@ -6,13 +6,24 @@
 }
 
 .svgView {
-
+  grid-column-start: 0;
+  grid-column-end: 2;
 
   background-color: Green;
 }
 
 .controls {
-
-
+  grid-column-start: 2;
+  grid-column-end: end;
+  display: flex;
+  flex-direction: column;
   background-color: yellow;
+}
+
+.inputField {
+
+}
+
+.graphSize {
+
 }

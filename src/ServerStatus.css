@@ -1,7 +1,7 @@
 .serverContainer {
     display: grid;
     grid-column-start: 1;
-    grid-column-end: end;
+    height: 10vh;
     grid-template-columns: 10vw 10vw 10vw;
 
     background-color: orange;
@@ -22,6 +22,5 @@
     grid-column-end: 2;
     width: 1vw;
     height: 1vw;
-    background-color: red;
     border-radius: 50%;
 }
