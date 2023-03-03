@@ -15,16 +15,15 @@ code {
 .container {
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-template-rows: auto;
   height: 100vh;
-  background-color: blue;
+  background-color: #cdb787;
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(8, 10%);
+  grid-template-columns: repeat(20, 4%);
   grid-column-start: 2;
   grid-column-end: 2;
-
-  background-color: blueviolet;
+  height: 100vh;
+  background-color: #BCB382;
 }

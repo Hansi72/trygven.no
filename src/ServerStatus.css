@@ -1,26 +1,39 @@
 .serverContainer {
-    display: grid;
-    grid-column-start: 1;
+    border-radius: 10%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: end;
+    grid-column-end: end;
+    grid-row-start: 1;
+    grid-row-end: 2;
     height: 10vh;
     grid-template-columns: 10vw 10vw 10vw;
 
-    background-color: orange;
+    background-color: #0892A5;
 }
 
 .server {
+    justify-content: space-between;
+    display: inline-block;
     grid-column-start: 1;
     grid-column-end: 1;
 }
 
-.serverStatus {
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
+.serverStatus {}
 
 .circle {
-    grid-column-start: 2;
-    grid-column-end: 2;
+    /*float: right;*/
     width: 1vw;
     height: 1vw;
+    /*border-width: 20%;*/
+    border-style: solid;
+  
+    /*border-image: linear-gradient(red, yellow);*/
+    /*border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;*/
     border-radius: 50%;
+}
+
+.restartBtn {
+    float: right;
 }

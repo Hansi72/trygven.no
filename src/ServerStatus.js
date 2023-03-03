@@ -34,11 +34,14 @@ function ServerStatus() {
     }
 
     for (let i = 0; i < servers.length; i++) {
-        serverDivs.push(<><div className="server">{servers[i]} </div><div id={servers[i] + "Status"} className="circle" /> <button type="button" onClick={function () { restartPrompt(servers[i]) }}>Restart</button></>);
+        serverDivs.push(<div className="server" key={servers[i]}>{servers[i]}
+        <button type="button" className="restartBtn" onClick={function () { restartPrompt(servers[i]) }}>Restart</button>
+            <div id={servers[i] + "Status"} className="circle" />
+            </div>);
     }
 
     return (
-        <div className="serverContainer">
+        <div key="serverContainer" className="serverContainer">
             Server Status:
             {serverDivs}
         </div>

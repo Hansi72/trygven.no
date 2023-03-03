@@ -1,7 +1,9 @@
 .svgContainer {
   grid-column-start: 1;
   grid-column-end: end;
-  display: grid;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  display: inline-grid;
   grid-template-columns: 80% 20%;
 }
 
