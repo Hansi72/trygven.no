@@ -7,23 +7,122 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .container {
+  font-size: 2.5rem;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
-  height: 100vh;
-  background-color: #cdb787;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40vh 60vh 100vh;
+  font-family: "Georgia", "Andale Mono";
 }
 
-.content {
-  display: grid;
-  grid-template-columns: repeat(20, 4%);
+.topbar {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
+
+  background-color: #b5c482;
+  font-size: 12rem;
+  color: white;
+}
+
+.bannertext {
+  float: left;
+
+  margin-right: 5rem;
+  margin-left: 2rem;
+  text-align: left;
+  font-size: 5rem;
+}
+
+.kiwi {
+  height: 35vh;
+  border-radius: 50%;
+  margin-right: 5%;
+
+  background-color: black;
+}
+
+.linkbox {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  height: fit-content;
+  margin-top: 10%;
+  padding-bottom: 2rem;
+  border-bottom-right-radius: 3vw;
+  border-top-right-radius: 3vw;
+  background-color: #d2d7df;
+}
+
+.serverstatus {
   grid-column-start: 2;
   grid-column-end: 2;
-  height: 100vh;
-  background-color: #BCB382;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+  margin-top: 10%;
+  margin-bottom: 20%;
+  margin-left: 40%;
+}
+
+.wikiCluster {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  height: fit-content;
+  margin-top: 10%;
+  padding-bottom: 2rem;
+  border-bottom-left-radius: 3vw;
+  border-top-left-radius: 3vw;
+  margin-left: 10%;
+  background-color: #d2d7df;
+}
+
+.Btn {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  width: fit-content;
+  background-color: #B5C482;
+  border-radius: 15%;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0.15rem 0.15rem #67697C;
+  cursor: pointer;
+  font-family: inherit;
+}
+.Btn:hover {
+  background-color: #adbb81;
+  /*#adbb81   #a9b681*/
+}
+
+/*Mobile*/
+@media (max-width:1200px) {
+  .bannertext {
+    display: none;
+  }
+
+  .kiwi {
+    margin-right: 0%;
+  }
+
+  .topbar {
+    float: none;
+    justify-content: center;
+  }
+
+  .serverstatus {
+    margin-left: 5%;
+  }
 }

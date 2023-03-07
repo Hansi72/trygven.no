@@ -1,6 +1,24 @@
 .linksContainer {
     display: flex;
-    flex-direction: row;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-left: 4%;
+    justify-content: space-evenly;
+}
+
+.linkHeader {
+    color: #67697C;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.link {
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+.link:hover {
+    color: white;
 }

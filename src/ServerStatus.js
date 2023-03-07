@@ -1,15 +1,11 @@
 import './ServerStatus.css';
 
 function ServerStatus() {
-    const servers = ["Rust", "Valheim", "etc"];
-    var serverDivs = [];
+    //List of servers to include. (affects both visible text and backend queries)
+    const servers = ["Web", "Valheim", "Rust"];
 
-    function restartServer(serverName, passcode) {
-        console.log("restarting server " + serverName + " with passcode " + passcode);
-        //todo create fetch
-    }
 
-    //todo create if passcode == 1234, open inf rickrolls
+    //todo if passcode == 1234, open inf rickrolls
     function restartPrompt(serverName) {
         let passcode = prompt("Enter passcode to restart " + serverName);
         if (passcode != null && passcode != "") {
@@ -17,32 +13,44 @@ function ServerStatus() {
         }
     }
 
+    function restartServer(serverName, passcode) {
+        console.log("restarting server " + serverName + " with passcode " + passcode);
+        //todo create fetch
+    }
+
     function updateStatus() {
         for (let i = 0; i < servers.length; i++) {
             if (checkStatus(servers[i])) {
-                document.getElementById(servers[i] + "Status").style.backgroundColor = "green";
+                document.getElementById(servers[i] + "Status").style.backgroundColor = "#39FF14";
             } else {
-                document.getElementById(servers[i] + "Status").style.backgroundColor = "red";
+                document.getElementById(servers[i] + "Status").style.backgroundColor = "#FF3131";
             }
         }
     }
     setInterval(updateStatus, 1000);
 
     function checkStatus(serverName) {
+        if(serverName == "Web"){
+            return true;
+        }
         //todo fetch server status of serverName
-        return true;
+        return false;
     }
 
+    var serverDivs = [];
     for (let i = 0; i < servers.length; i++) {
-        serverDivs.push(<div className="server" key={servers[i]}>{servers[i]}
-        <button type="button" className="restartBtn" onClick={function () { restartPrompt(servers[i]) }}>Restart</button>
-            <div id={servers[i] + "Status"} className="circle" />
-            </div>);
+        serverDivs.push(
+            <div className="server" key={servers[i]}>
+                <div className="circle" id={servers[i] + "Status"} />
+                <div className="serverName"> {servers[i]} </div>
+                <button className="Btn" key={servers[i] + "btn"} type="button" onClick={function () { restartPrompt(servers[i]) }}>Restart</button>
+            </div>
+        );
     }
 
     return (
-        <div key="serverContainer" className="serverContainer">
-            Server Status:
+        <div className="serverContainer">
+            <div className="serverHeader">Server status</div>
             {serverDivs}
         </div>
     );
