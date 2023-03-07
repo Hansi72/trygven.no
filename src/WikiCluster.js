@@ -62,7 +62,7 @@ console.log("reload");
                 <label htmlFor="graphsize">Graf størrelse</label>
                 <input type="range" id="graphSize" defaultValue="20" min="1" max="100" />
                 <button type="button" className="Btn" onClick={fetchGraph}>Hent graf</button>
-                <div className="errorMessage"> error </div>
+                <div className="errorMessage"> </div>
             </div>
         </div>
     );
