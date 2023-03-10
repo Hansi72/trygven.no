@@ -24,7 +24,7 @@ root.render(
       <div className="serverstatus">
         <ServerStatus />
       </div>
-      <div className="wikiCluster">
+      <div className="wikiCluster" id="WikiCluster">
         <WikiCluster />
       </div>
     </div>

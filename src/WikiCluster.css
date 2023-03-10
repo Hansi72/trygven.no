@@ -1,10 +1,10 @@
 .WikiContainer {
     display: flex;
     flex-direction: row;
-    margin-top: 3rem;
     padding-left: 4%;
     justify-content: flex-start;
-    margin-bottom: 2rem;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 .WikiHeader {
@@ -15,18 +15,36 @@
     display: flex;
     flex-direction: column;
     color: #67697C;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-left: vw;
     font-size: 2.5rem;
+    margin-left: 1vw;
 }
 
 .SVGViewer {
-    margin-top: 3rem;
+    
     border-radius: 10%;
     background-color: white;
-    height: 60vh;
+    height: 70vh;
     width: 50vw;
 }
+
+.loader {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28vh;
+    border: 1rem solid #67697C; 
+    border-top: 1rem solid #B5C482;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 .errorMessage {
     margin-top: 1rem;

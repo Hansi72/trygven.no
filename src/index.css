@@ -11,7 +11,7 @@ body {
   font-size: 2.5rem;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 40vh 60vh 100vh;
+  grid-template-rows: 40vh 60vh 90vh;
   font-family: "Georgia", "Andale Mono";
 }
 
@@ -79,10 +79,8 @@ body {
   grid-column-start: 1;
   grid-column-end: end;
   grid-row-start: 3;
-  grid-row-end: 3;
+  grid-row-end: end;
   height: fit-content;
-  margin-top: 10%;
-  padding-bottom: 2rem;
   border-bottom-left-radius: 3vw;
   border-top-left-radius: 3vw;
   margin-left: 10%;
