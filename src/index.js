@@ -11,10 +11,8 @@ root.render(
     <div className="container">
       <div className="topbar">
         <div className="bannertext">
-        <div>La meg designe <br/> frontend, easy (jk).</div>
-          <a href="https://www.linkedin.com/in/martine-oppegaard-jakobsen-60727b16b/" style={{ fontSize: "1.5rem", textDecoration: 'none', color: "white" }} >
-            <div>-Android dev</div>
-          </a>
+          <div>La meg designe <br /> frontend, easy (jk).</div>
+          <a className="quoteAuthor" href="https://www.linkedin.com/in/martine-oppegaard-jakobsen-60727b16b/" >-Android dev</a>
         </div>
         <img className="kiwi" src={require("./kiwi.jpg")} alt="kiwi" />
       </div>

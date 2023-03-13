@@ -22,7 +22,6 @@ body {
   grid-row-end: 1;
 
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 
@@ -35,12 +34,17 @@ body {
 }
 
 .bannertext {
-  float: left;
-
   margin-right: 5rem;
   margin-left: 2rem;
-  text-align: left;
   font-size: 5rem;
+}
+
+.quoteAuthor {
+  display: block;
+  width: fit-content;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
 }
 
 .kiwi {
@@ -100,6 +104,7 @@ body {
   cursor: pointer;
   font-family: inherit;
 }
+
 .Btn:hover {
   background-color: #adbb81;
   /*#adbb81   #a9b681*/
