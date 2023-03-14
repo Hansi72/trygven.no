@@ -84,7 +84,8 @@ body {
   grid-column-end: end;
   grid-row-start: 3;
   grid-row-end: end;
-  height: fit-content;
+  
+  margin-bottom: 10vh;
   border-bottom-left-radius: 3vw;
   border-top-left-radius: 3vw;
   margin-left: 10%;
@@ -127,5 +128,12 @@ body {
 
   .serverstatus {
     margin-left: 5%;
+  }
+
+  .wikiCluster {
+    margin-bottom: 0vw;
+    margin-left: 0vw;
+    border-bottom-left-radius: 0vw;
+    border-top-right-radius: 3vw;
   }
 }
