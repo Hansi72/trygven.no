@@ -15,13 +15,12 @@
     display: flex;
     flex-direction: column;
     color: #67697C;
-    margin-left: vw;
     font-size: 2.5rem;
     margin-left: 1vw;
+    width: 20vw;
 }
 
 .SVGViewer {
-    
     border-radius: 10%;
     background-color: white;
     height: 70vh;
@@ -33,21 +32,43 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 28vh;
-    border: 1rem solid #67697C; 
+    border: 1rem solid #67697C;
     border-top: 1rem solid #B5C482;
     border-radius: 50%;
     width: 5rem;
     height: 5rem;
     animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 .errorMessage {
     margin-top: 1rem;
     font-size: 1rem;
     color: #FF3131;
+    overflow-wrap: break-word;
+}
+
+/*Mobile*/
+@media (max-width:1200px) {
+    .WikiContainer {
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+
+    .SVGViewer {
+        width: 90vw;
+    }
+
+    .userControls {
+        width: 80vw;
+    }
 }
