@@ -20,7 +20,7 @@ function fetchGraph() {
     }
     let graphSize = document.getElementById("graphSize").value;
 
-    fetch("http://trygven.no:7200/getSVG?" + queryText + "+" + graphSize)
+    fetch("https://trygven.no:7200/getSVG?" + queryText + "+" + graphSize)
         .then((response) => {
             if (response.status == "200") {
                 response.text().then((svg) => {
@@ -65,7 +65,7 @@ function WikiCluster() {
                 <div id="SVG"></div>
             </div>
             <div className="userControls">
-                <div className="WikiHeader">Lag din egen graf</div>
+                <div className="WikiHeader">Wiki Cluster</div>
                 Graf noder
                 <input type="text" id="queryNames" defaultValue="Kiwi, Selfie" required></input>
                 <label htmlFor="graphsize">Graf størrelse</label>
