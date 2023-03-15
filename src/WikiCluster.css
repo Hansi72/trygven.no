@@ -17,7 +17,7 @@
     color: #67697C;
     font-size: 2.5rem;
     margin-left: 1vw;
-    width: 20vw;
+    width: 26vw;
 }
 
 .SVGViewer {
@@ -70,5 +70,8 @@
 
     .userControls {
         width: 80vw;
+    }
+    .WikiHeader {
+        margin-bottom: 0.5rem;
     }
 }
