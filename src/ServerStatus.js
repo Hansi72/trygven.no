@@ -35,7 +35,7 @@ function ServerStatus() {
             }
         }
     }
-    setInterval(updateStatus, 5000);
+    setInterval(updateStatus, 3000);
 
     var serverDivs = [];
     for (let i = 0; i < servers.length; i++) {
@@ -48,7 +48,7 @@ function ServerStatus() {
         );
     }
 
-    setTimeout(updateStatus, 100);
+    setTimeout(updateStatus, 500);
     return (
         <div className="serverContainer">
             <div className="serverHeader">Server status</div>
