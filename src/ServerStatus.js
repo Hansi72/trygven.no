@@ -14,28 +14,28 @@ function ServerStatus() {
     }
 
     function restartServer(serverName, passcode) {
-        console.log("restarting server " + serverName + " with passcode " + passcode);
-        //todo create fetch
+        fetch("https://trygven.no:7201/Restart?" + passcode + "+" + serverName);
     }
 
     function updateStatus() {
         for (let i = 0; i < servers.length; i++) {
-            if (checkStatus(servers[i])) {
+            if (servers[i] == "Web") {
                 document.getElementById(servers[i] + "Status").style.backgroundColor = "#39FF14";
             } else {
-                document.getElementById(servers[i] + "Status").style.backgroundColor = "#FF3131";
+                fetch("https://trygven.no:7201/Status?" + servers[i])
+                    .then((response) => {
+                        response.text().then((status) => {
+                            if (status == "true") {
+                                document.getElementById(servers[i] + "Status").style.backgroundColor = "#39FF14";
+                            } else {
+                                document.getElementById(servers[i] + "Status").style.backgroundColor = "#FF3131";
+                            }
+                        });
+                    });
             }
         }
     }
-    setInterval(updateStatus, 1000);
-
-    function checkStatus(serverName) {
-        if(serverName == "Web"){
-            return true;
-        }
-        //todo fetch server status of serverName
-        return false;
-    }
+    setInterval(updateStatus, 2000);
 
     var serverDivs = [];
     for (let i = 0; i < servers.length; i++) {
