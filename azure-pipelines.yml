@@ -10,6 +10,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    git clone https://github.com/Hansi72/trygven.no.git
+    cd trygven.no
     npm install
     npm run build
     echo $spwd | sudo -S cp -R build /var/www/trygven.no/html/
