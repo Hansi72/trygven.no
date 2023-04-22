@@ -4,7 +4,7 @@ trigger:
 pool: Default
 
 steps:
-- task: Bash@3
+- task: CmdLine@2
 - script: |
     npm install
   displayName: 'npm install'
