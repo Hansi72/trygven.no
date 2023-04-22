@@ -35,7 +35,7 @@ function ServerStatus() {
             }
         }
     }
-    setInterval(updateStatus, 3000);
+    setInterval(updateStatus, 10000);
 
     var serverDivs = [];
     for (let i = 0; i < servers.length; i++) {
