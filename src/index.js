@@ -4,6 +4,7 @@ import './index.css';
 import ServerStatus from './ServerStatus';
 import WikiCluster from './WikiCluster';
 import Links from './Links';
+import LinkMaze from './LinkMaze';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,7 @@ root.render(
         <img className="kiwi" src={require("./kiwi.jpg")} alt="kiwi" />
       </div>
       <div className="linkbox">
-        <Links />
+        <LinkMaze />
       </div>
       <div className="serverstatus">
         <ServerStatus />
