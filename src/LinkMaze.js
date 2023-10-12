@@ -273,11 +273,9 @@ function LinkMaze() {
         if (result === "win") {
             //victory condition
             textField.innerHTML = "Gratulerer! Lenkene er reddet!";
-            textField.style.color = "green";
         } else if (result === "lose" || result === "cheat") {
             //lose condition
             textField.innerHTML = "Rykk tilbake til start!";
-            textField.style.color = "red";
 
             const elements = document.getElementsByClassName('mazeLink');
             for (let i = 0; i < elements.length; i++) {
@@ -286,6 +284,7 @@ function LinkMaze() {
                 element.style.textDecoration = "line-through";
             }
             if(result === "cheat"){
+                textField.style.color = "red";
                 textField.innerHTML += "<br/> Det er ikke lov å jukse!";
             }
         }
