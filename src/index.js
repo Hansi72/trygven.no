@@ -18,7 +18,11 @@ root.render(
         <img className="kiwi" src={require("./kiwi.jpg")} alt="kiwi" />
       </div>
       <div className="linkbox">
+      {window.innerWidth > 1200 ? (
         <LinkMaze />
+      ) : (
+        <Links />
+      )}
       </div>
       <div className="serverstatus">
         <ServerStatus />
