@@ -270,10 +270,13 @@ function LinkMaze() {
         setMazeState(createMaze(mazeSize[0], mazeSize[1], 2, false));
         document.removeEventListener('pointermove', handleGame);
         const textField = document.getElementById("mazeText");
-        if (result === "win") {
+        if (result === "win" || result === "cheat") {
             //victory condition
             textField.innerHTML = "Gratulerer! Lenkene er reddet!";
-        } else if (result === "lose" || result === "cheat") {
+            if(result === "cheat"){
+                textField.innerHTML += "<br/> ...men du jukset!";
+            }
+        } else if (result === "lose") {
             //lose condition
             textField.innerHTML = "Rykk tilbake til start!";
 
@@ -282,10 +285,6 @@ function LinkMaze() {
                 const element = elements[i];
                 element.style.pointerEvents = "none";
                 element.style.textDecoration = "line-through";
-            }
-            if(result === "cheat"){
-                textField.style.color = "red";
-                textField.innerHTML += "<br/> Det er ikke lov å jukse!";
             }
         }
     };
