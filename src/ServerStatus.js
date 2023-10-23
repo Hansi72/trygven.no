@@ -19,24 +19,19 @@ function ServerStatus() {
 
     function updateStatus() {
         for (let i = 0; i < servers.length; i++) {
-            if (servers[i] === "Web") {
+            if (servers[i] == "Web") {
                 document.getElementById(servers[i] + "Status").style.backgroundColor = "#39FF14";
             } else {
-                try {
-                    fetch("https://trygven.no:7201/Status?" + servers[i])
-                        .then((response) => {
-                            response.text().then((status) => {
-                                if (status == "true") {
-                                    document.getElementById(servers[i] + "Status").style.backgroundColor = "#39FF14";
-                                } else {
-                                    document.getElementById(servers[i] + "Status").style.backgroundColor = "#FF3131";
-                                }
-                            });
+                fetch("https://trygven.no:7201/Status?" + servers[i])
+                    .then((response) => {
+                        response.text().then((status) => {
+                            if (status == "true") {
+                                document.getElementById(servers[i] + "Status").style.backgroundColor = "#39FF14";
+                            } else {
+                                document.getElementById(servers[i] + "Status").style.backgroundColor = "#FF3131";
+                            }
                         });
-                } catch(error) {
-                    //ignore error, server is probably offline
-                    document.getElementById(servers[i] + "Status").style.backgroundColor = "#FF3131";
-                }
+                    });
             }
         }
     }
