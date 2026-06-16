@@ -39,7 +39,7 @@ svg {
   position: absolute;
   z-index: 20000;
   
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   
